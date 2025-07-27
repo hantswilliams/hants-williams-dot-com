@@ -4,32 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hants Williams</title>
-    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {}
+            }
+        }
+    </script>
     <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: black;
-            color: white;
-            font-family: 'Arial', sans-serif;
-        }
-
-        h1 {
-            font-size: 2rem; /* Adjust the size as needed */
-            font-weight: 700; /* Bold */
-        }
-
-        /* Responsive font size for smaller devices */
+        /* Custom styles that won't interfere with Tailwind */
         @media (max-width: 640px) {
-            h1 {
+            .custom-h1 {
                 font-size: 1.5rem;
             }
         }
     </style>
 </head>
-<body>
-    <h1>Hants Williams</h1>
+<body class="flex justify-center items-center h-screen bg-black text-white font-sans">
+    
+    
+    <!-- Main content container -->
+    <div class="text-center">
+        <h1 class="text-5xl font-extrabold mb-6 tracking-tight">Hants Williams</h1>
+        <a href="https://about.hants-williams.com" target="_blank" rel="noopener noreferrer" class="inline-block text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">About and Projects</a>
+    </div>
+
+
 </body>
 </html>
